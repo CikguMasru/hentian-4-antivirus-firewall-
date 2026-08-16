@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        SKSTP2 Cyber Antivirus Firewall -
+        Antivirus Update
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ===================================================== -->
+<!-- HENTIAN 4 : ANTIVIRUS UPDATE -->
+<!-- ===================================================== -->
+
+<div
+    class="page active"
+    id="pageStart"
+>
+
+    <div class="container">
+
+
+        <!-- LOGO SEKOLAH -->
+
+        <div class="logo">
+
+            <img
+                src="assets/image/logo.png"
+                alt="Logo SK Sri Tanjung Papat 2"
+            >
+
+        </div>
+
+
+        <!-- TAJUK -->
+
+        <h1>
+            SKSTP2
+        </h1>
+
+
+        <h2>
+            CYBER ANTIVIRUS FIREWALL
+        </h2>
+
+
+        <p class="subtitle">
+            PPDa DIGITAL SECURITY SYSTEM
+        </p>
+
+
+        <div class="divider"></div>
+
+
+        <!-- HENTIAN -->
+
+        <h3>
+            ANTIVIRUS UPDATE
+        </h3>
+
+
+        <p class="scanSubtitle">
+            SYSTEM SAFE
+        </p>
+
+
+        <!-- STATUS -->
+
+        <div class="safeIcon">
+            🛡️
+        </div>
+
+
+        <div class="safeTitle">
+            SYSTEM PROTECTION UPDATE
+        </div>
+
+
+        <p class="instruction">
+
+            Sistem telah mengenal pasti
+            ancaman DARVIH.
+
+            <br>
+
+            Lengkapkan 3 soalan untuk
+            mengaktifkan perlindungan sistem.
+
+        </p>
+
+
+        <!-- UPDATE PROGRESS -->
+
+        <div class="updateBox">
+
+            <div class="updateTitle">
+                ANTIVIRUS UPDATE
+            </div>
+
+
+            <div
+                id="updatePercent"
+                class="updatePercent"
+            >
+                0%
+            </div>
+
+
+            <div class="updateBar">
+
+                <div
+                    id="updateBarFill"
+                    class="updateBarFill"
+                    style="width:0%;"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUTANG -->
+
+        <button
+            class="btnBlue"
+            onclick="mulaAntivirusUpdate()"
+        >
+
+            🔄 MULAKAN ANTIVIRUS UPDATE
+
+        </button>
+
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            SK Sri Tanjung Papat 2 Sandakan
+
+            <br>
+
+            Cyber Antivirus Firewall
+
+            <br>
+
+            HENTIAN 4
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- HALAMAN 2 : SCAN / VIRUS -->
+<!-- ===================================================== -->
+
+<div
+    class="page"
+    id="pageScan"
+>
+
+    <div class="container">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <img
+                src="assets/image/logo.png"
+                alt="Logo SKSTP2"
+            >
+
+        </div>
+
+
+        <h2>
+            ANTIVIRUS UPDATE
+        </h2>
+
+
+        <p class="scanSubtitle">
+            SYSTEM PROTECTION
+        </p>
+
+
+        <!-- STATUS -->
+
+        <div class="safeStatusBox">
+
+            <div class="safeStatusIcon">
+                🛡️
+            </div>
+
+
+            <div class="scanStatusTitle">
+                ANTIVIRUS STATUS
+            </div>
+
+
+            <div
+                id="scanStatus"
+                class="scanStatus"
+            >
+                READY
+            </div>
+
+        </div>
+
+
+        <!-- UPDATE -->
+
+        <div class="updateBox">
+
+            <div class="updateTitle">
+                UPDATE PROGRESS
+            </div>
+
+
+            <div
+                id="scanUpdatePercent"
+                class="updatePercent"
+            >
+                0%
+            </div>
+
+
+            <div class="updateBar">
+
+                <div
+                    id="scanUpdateBarFill"
+                    class="updateBarFill"
+                    style="width:0%;"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIRUS GRID -->
+
+        <div class="virusGrid">
+
+
+            <div class="virusCard">
+
+                <div class="virusIcon">
+                    💊
+                </div>
+
+                <h3>
+                    DADAH
+                </h3>
+
+            </div>
+
+
+            <div class="virusCard">
+
+                <div class="virusIcon">
+                    🍺
+                </div>
+
+                <h3>
+                    ALKOHOL
+                </h3>
+
+            </div>
+
+
+            <div class="virusCard">
+
+                <div class="virusIcon">
+                    🚬
+                </div>
+
+                <h3>
+                    ROKOK
+                </h3>
+
+            </div>
+
+
+            <div class="virusCard">
+
+                <div class="virusIcon">
+                    💨
+                </div>
+
+                <h3>
+                    VAPE
+                </h3>
+
+            </div>
+
+
+            <div class="virusCard">
+
+                <div class="virusIcon">
+                    🫁
+                </div>
+
+                <h3>
+                    INHALEN
+                </h3>
+
+            </div>
+
+
+            <div class="virusCard">
+
+                <div class="virusIcon">
+                    🦠
+                </div>
+
+                <h3>
+                    HIV / AIDS
+                </h3>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ARAHAN -->
+
+        <p class="instruction">
+
+            Jawab 3 soalan untuk melengkapkan
+            kemas kini antivirus.
+
+        </p>
+
+
+        <!-- BUTANG -->
+
+        <button
+            class="btnBlue"
+            onclick="bukaSoalan()"
+        >
+
+            🔄 MULAKAN UPDATE
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- HALAMAN 3 : SOALAN -->
+<!-- ===================================================== -->
+
+<div
+    class="page"
+    id="pageQuestion"
+>
+
+    <div class="container">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <img
+                src="assets/image/logo.png"
+                alt="Logo SKSTP2"
+            >
+
+        </div>
+
+
+        <h2>
+            ANTIVIRUS UPDATE
+        </h2>
+
+
+        <p class="scanSubtitle">
+            SYSTEM PROTECTION
+        </p>
+
+
+        <!-- NOMBOR SOALAN -->
+
+        <div
+            id="questionNumber"
+            class="questionNumber"
+        >
+
+            SOALAN 1 DARIPADA 3
+
+        </div>
+
+
+        <!-- SOALAN -->
+
+        <div
+            id="questionBox"
+            class="questionBox"
+        >
+
+            Apakah tindakan kita apabila
+            rakan terlibat DARVIH?
+
+        </div>
+
+
+        <!-- JAWAPAN -->
+
+        <div
+            id="answerArea"
+            class="answerArea"
+        >
+
+            <!-- Diisi oleh JavaScript -->
+
+        </div>
+
+
+        <!-- STATUS -->
+
+        <div
+            id="questionStatus"
+            class="questionStatus"
+        ></div>
+
+
+        <!-- UPDATE -->
+
+        <div class="questionProgress">
+
+            <span>
+                UPDATE PROGRESS
+            </span>
+
+
+            <strong
+                id="questionUpdate"
+            >
+                0%
+            </strong>
+
+        </div>
+
+
+        <div class="updateBar">
+
+            <div
+                id="questionUpdateBar"
+                class="updateBarFill"
+                style="width:0%;"
+            ></div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- HALAMAN 4 : SYSTEM SAFE / MISSION COMPLETE -->
+<!-- ===================================================== -->
+
+<div
+    class="page"
+    id="pageComplete"
+>
+
+    <div class="container">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <img
+                src="assets/image/logo.png"
+                alt="Logo SKSTP2"
+            >
+
+        </div>
+
+
+        <!-- SHIELD -->
+
+        <div class="finalShield">
+            🛡️
+        </div>
+
+
+        <!-- SYSTEM SAFE -->
+
+        <h1 class="safeCompleteTitle">
+            SYSTEM SAFE
+        </h1>
+
+
+        <h2>
+            ANTIVIRUS UPDATE COMPLETE
+        </h2>
+
+
+        <!-- 100% -->
+
+        <div class="completePercent safePercent">
+            100%
+        </div>
+
+
+        <p class="successSubtitle">
+            ANTIVIRUS PROTECTION: ACTIVE
+        </p>
+
+
+        <!-- STATUS -->
+
+        <div class="safeStatusBox">
+
+            <div class="safeStatusIcon">
+                🟢
+            </div>
+
+
+            <div class="scanStatusTitle">
+                SYSTEM STATUS
+            </div>
+
+
+            <div
+                class="scanStatus"
+                style="color:#00ff91;"
+            >
+
+                ✓ SYSTEM SECURED
+
+            </div>
+
+        </div>
+
+
+        <!-- MESEJ AKHIR -->
+
+        <p class="subtitle">
+
+            🎉 Tahniah!
+
+            <br><br>
+
+            Anda telah berjaya melengkapkan
+            keseluruhan misi
+            <b>Cyber Antivirus Firewall</b>.
+
+            <br><br>
+
+            Semua ancaman DARVIH telah dikenal pasti
+            dan sistem kini berada dalam keadaan
+            <b>SELAMAT</b>.
+
+        </p>
+
+
+        <!-- MISSION COMPLETE -->
+
+        <div class="missionComplete">
+
+            🏆 MISSION COMPLETE 🏆
+
+        </div>
+
+
+        <!-- BUTANG -->
+
+        <button
+            class="btnBlue"
+            onclick="imbasEjenBaharu()"
+        >
+
+            🔄 IMBAS EJEN BAHARU
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- HALAMAN SALAH -->
+<!-- ===================================================== -->
+
+<div
+    class="page"
+    id="pageWrong"
+>
+
+    <div class="container">
+
+
+        <div class="warningIcon">
+            ⚠️
+        </div>
+
+
+        <h1 class="wrongTitle">
+            JAWAPAN BELUM TEPAT
+        </h1>
+
+
+        <p class="subtitle">
+            Sila cuba lagi.
+        </p>
+
+
+        <button
+            class="btnBlue"
+            onclick="kembaliKeSoalan()"
+        >
+
+            ↩️ CUBA LAGI
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- AUDIO : BETUL -->
+<!-- ===================================================== -->
+
+<audio
+    id="audioBetul"
+    preload="auto"
+>
+
+    <source
+        src="assets/audio/betul.wav"
+        type="audio/wav"
+    >
+
+</audio>
+
+
+<!-- ===================================================== -->
+<!-- AUDIO : ANTIVIRUS UPDATE COMPLETE -->
+<!-- ===================================================== -->
+
+<audio
+    id="audioAntivirusUpdateComplete"
+    preload="auto"
+>
+
+    <source
+        src="assets/audio/antivirus_update_complete.wav"
+        type="audio/wav"
+    >
+
+</audio>
+
+
+<!-- ===================================================== -->
+<!-- AUDIO : SYSTEM SAFE -->
+<!-- ===================================================== -->
+
+<audio
+    id="audioSystemSafe"
+    preload="auto"
+>
+
+    <source
+        src="assets/audio/system_safe.wav"
+        type="audio/wav"
+    >
+
+</audio>
+
+
+<!-- ===================================================== -->
+<!-- AUDIO : MISSION COMPLETE -->
+<!-- ===================================================== -->
+
+<audio
+    id="audioMissionComplete"
+    preload="auto"
+>
+
+    <source
+        src="assets/audio/mission_complete.wav"
+        type="audio/wav"
+    >
+
+</audio>
+
+
+<!-- ===================================================== -->
+<!-- AUDIO : SALAH -->
+<!-- ===================================================== -->
+
+<audio
+    id="audioSalah"
+    preload="auto"
+>
+
+    <source
+        src="assets/audio/maaf_jawapan_belum_tepat.wav"
+        type="audio/wav"
+    >
+
+</audio>
+
+
+<!-- ===================================================== -->
+<!-- AUDIO : CUBA LAGI -->
+<!-- ===================================================== -->
+
+<audio
+    id="audioCubaLagi"
+    preload="auto"
+>
+
+    <source
+        src="assets/audio/cuba_lagi.wav"
+        type="audio/wav"
+    >
+
+</audio>
+
+
+<!-- ===================================================== -->
+<!-- JAVASCRIPT -->
+<!-- ===================================================== -->
+
+<script
+    src="script.js"
+></script>
+
+
+</body>
+
+</html>

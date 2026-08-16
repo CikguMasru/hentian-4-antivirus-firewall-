@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cyber Antivirus Firewall - Sijil Peserta</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     BORANG PESERTA
+====================================================== -->
+
+<section id="formPage" class="page">
+
+    <div class="card">
+
+        <h1>🏆 MAKLUMAT PESERTA</h1>
+
+        <p class="subtitle">
+
+            Tahniah!
+
+            <br><br>
+
+            Anda telah berjaya menyelesaikan
+            semua 4 Misi Cyber Antivirus Firewall.
+
+            <br><br>
+
+            Sila masukkan maklumat anda
+            untuk menjana Sijil Penghargaan.
+
+        </p>
+
+        <div class="form-group">
+
+            <label>Nama Peserta</label>
+
+            <input
+                id="nama"
+                type="text"
+                autocomplete="off"
+                placeholder="Contoh : MUHAMMAD AIMAN BIN ALI">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Kelas</label>
+
+            <input
+                id="kelas"
+                type="text"
+                autocomplete="off"
+                placeholder="Contoh : 5 BESTARI">
+
+        </div>
+
+        <button
+            class="primaryBtn"
+            onclick="janaSijil()">
+
+            🏆 JANA SIJIL
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     LOADING
+====================================================== -->
+
+<section id="loadingPage" class="page" style="display:none;">
+
+    <div class="loadingBox">
+
+        <div class="spinner"></div>
+
+        <h2>MENJANA SIJIL...</h2>
+
+        <p>Sila tunggu sebentar</p>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     SIJIL
+====================================================== -->
+
+<section id="certificatePage" class="page" style="display:none;">
+
+    <div id="certificate">
+
+        <img
+            src="assets/certificate-template.png"
+            class="certificate-bg"
+            alt="Sijil">
+
+        <!-- Nama -->
+
+        <div id="certificateName"></div>
+
+        <!-- Kelas -->
+
+        <div id="certificateClass"></div>
+
+        <!-- Tarikh -->
+
+        <div id="certificateDate"></div>
+
+        <!-- Masa -->
+
+        <div id="certificateTime"></div>
+
+    </div>
+
+    <div class="buttonArea">
+
+        <button
+            id="downloadBtn"
+            class="primaryBtn"
+            onclick="downloadCertificate()">
+
+            📥 MUAT TURUN SIJIL
+
+        </button>
+
+        <button
+            class="secondaryBtn"
+            onclick="resetForm()">
+
+            👤 PESERTA SETERUSNYA
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     AUDIO
+====================================================== -->
+
+<audio id="successAudio" preload="auto">
+    <source src="assets/success.mp3" type="audio/mpeg">
+</audio>
+
+<!-- =====================================================
+     HTML2CANVAS
+====================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

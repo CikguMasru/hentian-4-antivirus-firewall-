@@ -1,0 +1,1901 @@
+/* =======================================================
+   SKSTP2 CYBER ANTIVIRUS FIREWALL
+   HENTIAN 4 - ANTIVIRUS UPDATE
+   SYSTEM SAFE
+======================================================= */
+
+
+/* =======================================================
+   RESET
+======================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =======================================================
+   HTML / BODY
+======================================================= */
+
+html {
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+}
+
+
+body {
+
+    width: 100%;
+    height: 100dvh;
+
+    min-height: 100dvh;
+
+    overflow: hidden;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #ffffff;
+
+    background:
+
+        radial-gradient(
+            circle at top,
+            #123b59 0%,
+            #071a2a 45%,
+            #020b13 100%
+        );
+
+}
+
+
+/* =======================================================
+   PAGE
+======================================================= */
+
+.page {
+
+    display: none;
+
+    width: 100%;
+    height: 100dvh;
+
+    min-height: 100dvh;
+
+    overflow: hidden;
+
+}
+
+
+.page.active {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =======================================================
+   CONTAINER
+======================================================= */
+
+.container {
+
+    width:
+        min(
+            100%,
+            950px
+        );
+
+    height: 100dvh;
+
+    max-height: 100dvh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
+
+    padding:
+        clamp(
+            10px,
+            1.8vh,
+            20px
+        );
+
+    border:
+        2px solid
+        rgba(
+            0,
+            229,
+            255,
+            .35
+        );
+
+    border-radius: 24px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(12,39,63,.97),
+            rgba(5,19,31,.98)
+        );
+
+    box-shadow:
+
+        0 0 30px
+        rgba(
+            0,
+            229,
+            255,
+            .20
+        ),
+
+        inset 0 0 30px
+        rgba(
+            0,
+            229,
+            255,
+            .035
+        );
+
+}
+
+
+/* =======================================================
+   LOGO
+======================================================= */
+
+.logo {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom:
+        clamp(
+            2px,
+            .5vh,
+            6px
+        );
+
+}
+
+
+.logo img {
+
+    width:
+        clamp(
+            45px,
+            7vh,
+            72px
+        );
+
+    max-height: 72px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(
+                0,
+                229,
+                255,
+                .25
+            )
+        );
+
+}
+
+
+/* =======================================================
+   TAJUK
+======================================================= */
+
+h1 {
+
+    font-size:
+        clamp(
+            1.5rem,
+            4vh,
+            2.6rem
+        );
+
+    line-height: 1.05;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 2px;
+
+}
+
+
+h2 {
+
+    font-size:
+        clamp(
+            1rem,
+            2.7vh,
+            1.55rem
+        );
+
+    line-height: 1.1;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 3px;
+
+}
+
+
+h3 {
+
+    font-size:
+        clamp(
+            .95rem,
+            2.5vh,
+            1.4rem
+        );
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =======================================================
+   SUBTITLE
+======================================================= */
+
+.subtitle {
+
+    font-size:
+        clamp(
+            .65rem,
+            1.7vh,
+            .95rem
+        );
+
+    line-height: 1.3;
+
+    margin:
+        3px 0;
+
+}
+
+
+.scanSubtitle {
+
+    font-size:
+        clamp(
+            .72rem,
+            1.8vh,
+            1rem
+        );
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    margin:
+        2px 0 6px;
+
+}
+
+
+/* =======================================================
+   DIVIDER
+======================================================= */
+
+.divider {
+
+    width: 80%;
+
+    max-width: 600px;
+
+    height: 1px;
+
+    margin:
+        3px 0 7px;
+
+    background:
+        rgba(
+            0,
+            229,
+            255,
+            .35
+        );
+
+}
+
+
+/* =======================================================
+   SAFE ICON
+======================================================= */
+
+.safeIcon {
+
+    font-size:
+        clamp(
+            2rem,
+            6vh,
+            3.8rem
+        );
+
+    line-height: 1;
+
+    margin:
+        2px 0;
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(
+                0,
+                255,
+                145,
+                .45
+            )
+        );
+
+}
+
+
+.safeTitle {
+
+    font-size:
+        clamp(
+            .7rem,
+            1.8vh,
+            1rem
+        );
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    margin:
+        2px 0 5px;
+
+}
+
+
+/* =======================================================
+   UPDATE BOX
+======================================================= */
+
+.updateBox {
+
+    width:
+        min(
+            92%,
+            600px
+        );
+
+    padding:
+        8px 12px;
+
+    margin:
+        4px 0 7px;
+
+    border:
+        1px solid
+        rgba(
+            0,
+            255,
+            145,
+            .35
+        );
+
+    border-radius: 12px;
+
+    background:
+        rgba(
+            0,
+            255,
+            145,
+            .035
+        );
+
+    box-shadow:
+        inset 0 0 15px
+        rgba(
+            0,
+            255,
+            145,
+            .025
+        );
+
+}
+
+
+/* =======================================================
+   UPDATE TITLE
+======================================================= */
+
+.updateTitle {
+
+    font-size:
+        clamp(
+            .55rem,
+            1.3vh,
+            .72rem
+        );
+
+    letter-spacing: 1.5px;
+
+    opacity: .8;
+
+}
+
+
+/* =======================================================
+   UPDATE PERCENT
+======================================================= */
+
+.updatePercent {
+
+    font-size:
+        clamp(
+            1.7rem,
+            4.5vh,
+            2.8rem
+        );
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    margin:
+        3px 0 5px;
+
+}
+
+
+/* =======================================================
+   UPDATE BAR
+======================================================= */
+
+.updateBar {
+
+    width: 100%;
+
+    height:
+        clamp(
+            7px,
+            1vh,
+            10px
+        );
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .10
+        );
+
+}
+
+
+/* =======================================================
+   UPDATE BAR FILL
+======================================================= */
+
+.updateBarFill {
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    transition:
+        width .8s ease;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00b96b,
+            #00ff91
+        );
+
+    box-shadow:
+        0 0 12px
+        rgba(
+            0,
+            255,
+            145,
+            .45
+        );
+
+}
+
+
+/* =======================================================
+   INSTRUCTION
+======================================================= */
+
+.instruction {
+
+    width:
+        min(
+            92%,
+            700px
+        );
+
+    font-size:
+        clamp(
+            .65rem,
+            1.7vh,
+            .95rem
+        );
+
+    line-height: 1.35;
+
+    margin:
+        3px 0 8px;
+
+}
+
+
+/* =======================================================
+   BUTTON
+======================================================= */
+
+.btnBlue {
+
+    width:
+        min(
+            92%,
+            560px
+        );
+
+    min-height:
+        clamp(
+            40px,
+            5.5vh,
+            52px
+        );
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding:
+        7px 14px;
+
+    margin:
+        4px 0;
+
+    font-size:
+        clamp(
+            .68rem,
+            1.8vh,
+            .95rem
+        );
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #087cf0,
+            #0055bd
+        );
+
+    box-shadow:
+
+        0 5px 16px
+        rgba(
+            0,
+            100,
+            255,
+            .25
+        );
+
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease;
+
+}
+
+
+.btnBlue:hover {
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+
+        0 7px 20px
+        rgba(
+            0,
+            120,
+            255,
+            .35
+        );
+
+}
+
+
+.btnBlue:active {
+
+    transform:
+        scale(.98);
+
+}
+
+
+.btnBlue:disabled {
+
+    opacity: .5;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =======================================================
+   FOOTER
+======================================================= */
+
+.footer {
+
+    margin-top: auto;
+
+    padding-top: 5px;
+
+    font-size:
+        clamp(
+            .5rem,
+            1.2vh,
+            .68rem
+        );
+
+    line-height: 1.3;
+
+    opacity: .55;
+
+}
+
+
+/* =======================================================
+   SAFE STATUS BOX
+======================================================= */
+
+.safeStatusBox {
+
+    width:
+        min(
+            92%,
+            600px
+        );
+
+    padding:
+        7px 12px;
+
+    margin:
+        4px 0 6px;
+
+    border:
+        1px solid
+        rgba(
+            0,
+            255,
+            145,
+            .35
+        );
+
+    border-radius: 12px;
+
+    background:
+        rgba(
+            0,
+            255,
+            145,
+            .035
+        );
+
+}
+
+
+/* =======================================================
+   SAFE STATUS ICON
+======================================================= */
+
+.safeStatusIcon {
+
+    font-size:
+        clamp(
+            1.3rem,
+            3.5vh,
+            2rem
+        );
+
+    line-height: 1;
+
+    margin-bottom: 2px;
+
+}
+
+
+/* =======================================================
+   SCAN STATUS TITLE
+======================================================= */
+
+.scanStatusTitle {
+
+    font-size:
+        clamp(
+            .52rem,
+            1.2vh,
+            .7rem
+        );
+
+    letter-spacing: 1px;
+
+    opacity: .7;
+
+}
+
+
+/* =======================================================
+   SCAN STATUS
+======================================================= */
+
+.scanStatus {
+
+    font-size:
+        clamp(
+            .75rem,
+            1.9vh,
+            1.05rem
+        );
+
+    font-weight: 800;
+
+    margin-top: 2px;
+
+}
+
+
+/* =======================================================
+   VIRUS GRID
+======================================================= */
+
+.virusGrid {
+
+    width:
+        min(
+            94%,
+            720px
+        );
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap:
+        clamp(
+            5px,
+            1vh,
+            10px
+        );
+
+    margin:
+        2px 0 7px;
+
+}
+
+
+/* =======================================================
+   VIRUS CARD
+======================================================= */
+
+.virusCard {
+
+    min-height:
+        clamp(
+            58px,
+            8vh,
+            82px
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(
+            0,
+            255,
+            145,
+            .28
+        );
+
+    border-radius: 12px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(
+                0,
+                80,
+                55,
+                .30
+            ),
+            rgba(
+                10,
+                25,
+                25,
+                .65
+            )
+        );
+
+    box-shadow:
+
+        inset 0 0 15px
+        rgba(
+            0,
+            255,
+            145,
+            .05
+        );
+
+    opacity: .85;
+
+}
+
+
+/* =======================================================
+   VIRUS ICON
+======================================================= */
+
+.virusIcon {
+
+    font-size:
+        clamp(
+            1.4rem,
+            3.6vh,
+            2.3rem
+        );
+
+    line-height: 1;
+
+    margin-bottom: 3px;
+
+}
+
+
+/* =======================================================
+   VIRUS TITLE
+======================================================= */
+
+.virusCard h3 {
+
+    font-size:
+        clamp(
+            .52rem,
+            1.4vh,
+            .75rem
+        );
+
+    letter-spacing: .5px;
+
+}
+
+
+/* =======================================================
+   QUESTION NUMBER
+======================================================= */
+
+.questionNumber {
+
+    font-size:
+        clamp(
+            .65rem,
+            1.7vh,
+            .9rem
+        );
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin:
+        4px 0 6px;
+
+}
+
+
+/* =======================================================
+   QUESTION BOX
+======================================================= */
+
+.questionBox {
+
+    width:
+        min(
+            94%,
+            720px
+        );
+
+    padding:
+        clamp(
+            9px,
+            1.5vh,
+            16px
+        );
+
+    margin:
+        3px 0 8px;
+
+    border:
+        1px solid
+        rgba(
+            0,
+            255,
+            145,
+            .35
+        );
+
+    border-radius: 14px;
+
+    background:
+        rgba(
+            0,
+            255,
+            145,
+            .035
+        );
+
+    font-size:
+        clamp(
+            .8rem,
+            2.1vh,
+            1.15rem
+        );
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+}
+
+
+/* =======================================================
+   ANSWER AREA
+======================================================= */
+
+.answerArea {
+
+    width:
+        min(
+            94%,
+            720px
+        );
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    gap:
+        clamp(
+            5px,
+            1vh,
+            9px
+        );
+
+}
+
+
+/* =======================================================
+   ANSWER BUTTON
+======================================================= */
+
+.answer {
+
+    min-height:
+        clamp(
+            44px,
+            6vh,
+            62px
+        );
+
+    padding:
+        7px 10px;
+
+    border:
+        1px solid
+        rgba(
+            0,
+            255,
+            145,
+            .25
+        );
+
+    border-radius: 11px;
+
+    background:
+        rgba(
+            10,
+            55,
+            50,
+            .85
+        );
+
+    color: #ffffff;
+
+    font-size:
+        clamp(
+            .62rem,
+            1.6vh,
+            .85rem
+        );
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .15s ease;
+
+}
+
+
+.answer:hover {
+
+    background:
+        rgba(
+            0,
+            150,
+            95,
+            .40
+        );
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+.answer:active {
+
+    transform:
+        scale(.98);
+
+}
+
+
+.answer:disabled {
+
+    opacity: .55;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =======================================================
+   QUESTION STATUS
+======================================================= */
+
+.questionStatus {
+
+    min-height:
+        22px;
+
+    margin:
+        5px 0 3px;
+
+    font-size:
+        clamp(
+            .7rem,
+            1.8vh,
+            .95rem
+        );
+
+    font-weight: 900;
+
+}
+
+
+/* =======================================================
+   QUESTION PROGRESS
+======================================================= */
+
+.questionProgress {
+
+    width:
+        min(
+            92%,
+            600px
+        );
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin:
+        5px 0 3px;
+
+    font-size:
+        clamp(
+            .55rem,
+            1.3vh,
+            .72rem
+        );
+
+    letter-spacing: .8px;
+
+}
+
+
+/* =======================================================
+   FINAL SHIELD
+======================================================= */
+
+.finalShield {
+
+    font-size:
+        clamp(
+            2.8rem,
+            7vh,
+            4.8rem
+        );
+
+    line-height: 1;
+
+    margin:
+        2px 0;
+
+    filter:
+        drop-shadow(
+            0 0 16px
+            rgba(
+                0,
+                255,
+                145,
+                .55
+            )
+        );
+
+    animation:
+        safePulse 2s
+        ease-in-out infinite;
+
+}
+
+
+@keyframes safePulse {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.06);
+
+    }
+
+}
+
+
+/* =======================================================
+   SAFE COMPLETE TITLE
+======================================================= */
+
+.safeCompleteTitle {
+
+    color: #00ff91;
+
+    font-size:
+        clamp(
+            1.8rem,
+            5vh,
+            3.2rem
+        );
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin:
+        2px 0;
+
+    text-shadow:
+
+        0 0 12px
+        rgba(
+            0,
+            255,
+            145,
+            .45
+        );
+
+}
+
+
+/* =======================================================
+   COMPLETE PERCENT
+======================================================= */
+
+.completePercent {
+
+    font-size:
+        clamp(
+            3rem,
+            8vh,
+            5rem
+        );
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    margin:
+        3px 0;
+
+}
+
+
+.safePercent {
+
+    color: #00ff91;
+
+    text-shadow:
+
+        0 0 15px
+        rgba(
+            0,
+            255,
+            145,
+            .45
+        );
+
+}
+
+
+/* =======================================================
+   SUCCESS SUBTITLE
+======================================================= */
+
+.successSubtitle {
+
+    font-size:
+        clamp(
+            .72rem,
+            1.8vh,
+            1rem
+        );
+
+    font-weight: 800;
+
+    margin:
+        2px 0 5px;
+
+}
+
+
+/* =======================================================
+   MISSION COMPLETE
+======================================================= */
+
+.missionComplete {
+
+    width:
+        min(
+            92%,
+            600px
+        );
+
+    padding:
+        7px 12px;
+
+    margin:
+        4px 0 6px;
+
+    border:
+        1px solid
+        rgba(
+            0,
+            255,
+            145,
+            .45
+        );
+
+    border-radius: 12px;
+
+    background:
+        rgba(
+            0,
+            255,
+            145,
+            .06
+        );
+
+    color: #00ff91;
+
+    font-size:
+        clamp(
+            .75rem,
+            2vh,
+            1.05rem
+        );
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+
+        0 0 8px
+        rgba(
+            0,
+            255,
+            145,
+            .35
+        );
+
+}
+
+
+/* =======================================================
+   WARNING
+======================================================= */
+
+.warningIcon {
+
+    font-size:
+        clamp(
+            3rem,
+            8vh,
+            5rem
+        );
+
+    margin-bottom: 5px;
+
+}
+
+
+.wrongTitle {
+
+    font-size:
+        clamp(
+            1.5rem,
+            4vh,
+            2.5rem
+        );
+
+}
+
+
+/* =======================================================
+   MOBILE
+======================================================= */
+
+@media (
+    max-width: 600px
+) {
+
+    .container {
+
+        padding:
+            7px 9px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .logo img {
+
+        width: 45px;
+
+    }
+
+
+    h1 {
+
+        font-size: 1.45rem;
+
+    }
+
+
+    h2 {
+
+        font-size: .95rem;
+
+    }
+
+
+    .scanSubtitle {
+
+        font-size: .68rem;
+
+    }
+
+
+    .safeIcon {
+
+        font-size: 2rem;
+
+    }
+
+
+    .virusGrid {
+
+        gap: 4px;
+
+    }
+
+
+    .virusCard {
+
+        min-height: 55px;
+
+    }
+
+
+    .virusIcon {
+
+        font-size: 1.35rem;
+
+    }
+
+
+    .virusCard h3 {
+
+        font-size: .48rem;
+
+    }
+
+
+    .answerArea {
+
+        gap: 5px;
+
+    }
+
+
+    .answer {
+
+        min-height: 42px;
+
+        font-size: .58rem;
+
+        padding:
+            5px 7px;
+
+    }
+
+
+    .questionBox {
+
+        padding: 8px;
+
+        font-size: .72rem;
+
+    }
+
+
+    .btnBlue {
+
+        min-height: 38px;
+
+        font-size: .65rem;
+
+    }
+
+
+    .footer {
+
+        font-size: .48rem;
+
+    }
+
+
+    .safeCompleteTitle {
+
+        font-size: 1.65rem;
+
+    }
+
+
+    .completePercent {
+
+        font-size: 3rem;
+
+    }
+
+
+    .missionComplete {
+
+        font-size: .65rem;
+
+    }
+
+}
+
+
+/* =======================================================
+   TELEFON PENDEK
+======================================================= */
+
+@media (
+    max-width: 600px
+)
+and
+(
+    max-height: 700px
+) {
+
+    .container {
+
+        padding:
+            5px 7px;
+
+    }
+
+
+    .logo img {
+
+        width: 38px;
+
+    }
+
+
+    h1 {
+
+        font-size: 1.25rem;
+
+    }
+
+
+    h2 {
+
+        font-size: .85rem;
+
+    }
+
+
+    .scanSubtitle {
+
+        margin-bottom: 3px;
+
+    }
+
+
+    .updateBox {
+
+        padding:
+            5px 8px;
+
+        margin:
+            2px 0 4px;
+
+    }
+
+
+    .updatePercent {
+
+        font-size: 1.5rem;
+
+        margin:
+            2px 0 3px;
+
+    }
+
+
+    .virusCard {
+
+        min-height: 49px;
+
+    }
+
+
+    .virusIcon {
+
+        font-size: 1.15rem;
+
+    }
+
+
+    .questionBox {
+
+        margin-bottom: 5px;
+
+    }
+
+
+    .answer {
+
+        min-height: 38px;
+
+        font-size: .54rem;
+
+    }
+
+
+    .questionStatus {
+
+        min-height: 18px;
+
+        margin:
+            2px 0;
+
+    }
+
+
+    .finalShield {
+
+        font-size: 2.3rem;
+
+    }
+
+
+    .safeCompleteTitle {
+
+        font-size: 1.5rem;
+
+    }
+
+
+    .completePercent {
+
+        font-size: 2.8rem;
+
+    }
+
+
+    .missionComplete {
+
+        padding:
+            5px 8px;
+
+        font-size: .58rem;
+
+    }
+
+}
+
+
+/* =======================================================
+   LANDSCAPE
+======================================================= */
+
+@media (
+    max-height: 600px
+) {
+
+    .container {
+
+        padding-top: 4px;
+
+    }
+
+
+    .logo img {
+
+        width: 38px;
+
+    }
+
+
+    h1 {
+
+        font-size: 1.35rem;
+
+    }
+
+
+    h2 {
+
+        font-size: .9rem;
+
+    }
+
+
+    .safeIcon {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    .virusCard {
+
+        min-height: 50px;
+
+    }
+
+
+    .virusIcon {
+
+        font-size: 1.2rem;
+
+    }
+
+
+    .answer {
+
+        min-height: 38px;
+
+    }
+
+
+    .questionBox {
+
+        padding: 7px;
+
+        margin-bottom: 4px;
+
+    }
+
+
+    .btnBlue {
+
+        min-height: 35px;
+
+    }
+
+
+    .footer {
+
+        display: none;
+
+    }
+
+
+    .finalShield {
+
+        font-size: 2.5rem;
+
+    }
+
+}
+
+
+/* =======================================================
+   TABLET
+======================================================= */
+
+@media (
+    min-width: 601px
+)
+and
+(
+    max-width: 1100px
+) {
+
+    .container {
+
+        width: 100%;
+
+        border-radius: 20px;
+
+    }
+
+
+    .virusGrid {
+
+        max-width: 760px;
+
+    }
+
+
+    .answerArea {
+
+        max-width: 760px;
+
+    }
+
+}
+
+
+/* =======================================================
+   ACCESSIBILITY
+======================================================= */
+
+button {
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+}
+
+
+button:focus-visible {
+
+    outline:
+        2px solid
+        #00ff91;
+
+    outline-offset: 2px;
+
+}
+
+
+/* =======================================================
+   NO SCROLL
+======================================================= */
+
+html,
+body,
+.page,
+.container {
+
+    overscroll-behavior: none;
+
+    scrollbar-width: none;
+
+}
+
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.page::-webkit-scrollbar,
+.container::-webkit-scrollbar {
+
+    display: none;
+
+}
